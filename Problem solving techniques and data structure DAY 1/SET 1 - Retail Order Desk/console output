@@ -1,0 +1,216 @@
+ C:\Users\Hp\OneDrive\Desktop\orderprocessingproject> javac Order.java Main.java
+>> java Main
+Orders loaded: 50000
+First order: Order ID: 100001, Customer: 4248, Amount: 1932.63, Created At: 2026-10-29T00:00:03
+
+===== TASK 1: SEARCH =====
+Target ID: 150000
+Linear result: Order ID: 150000, Customer: 3383, Amount: 1595.14, Created At: 2026-10-30T03:36:22
+Linear time: 5773300 ns
+Binary result: Order ID: 150000, Customer: 3383, Amount: 1595.14, Created At: 2026-10-30T03:36:22
+Binary time: 15200 ns
+Binary-search sorting time excluded.
+
+===== TASK 2: SORTING =====
+Records sorted: 10000
+Bubble Sort: 284778900 ns
+Merge Sort: 7395600 ns
+Built-in Sort: 7192400 ns
+Top 5 orders:
+Order ID: 108561, Customer: 4095, Amount: 2004.73, Created At: 2026-10-29T04:46:02
+Order ID: 103243, Customer: 3692, Amount: 2004.26, Created At: 2026-10-29T01:48:03
+Order ID: 104296, Customer: 3483, Amount: 2004.22, Created At: 2026-10-29T02:23:20
+Order ID: 107860, Customer: 3699, Amount: 2004.01, Created At: 2026-10-29T04:21:58
+Order ID: 103514, Customer: 3629, Amount: 2003.43, Created At: 2026-10-29T01:56:54
+Bubble and Merge results correct: true
+
+===== TASK 3: DUPLICATES =====
+Duplicate order: 100287
+Duplicate order: 100299
+Duplicate order: 101226
+Duplicate order: 101562
+Duplicate order: 101699
+Duplicate order: 101951
+Duplicate order: 103088
+Duplicate order: 103134
+Duplicate order: 103188
+Duplicate order: 103195
+Duplicate order: 103349
+Duplicate order: 104452
+Duplicate order: 104908
+Duplicate order: 104983
+Duplicate order: 105070
+Duplicate order: 105094
+Duplicate order: 105634
+Duplicate order: 105764
+Duplicate order: 106364
+Duplicate order: 106750
+Duplicate order: 106753
+Duplicate order: 107071
+Duplicate order: 107188
+Duplicate order: 107236
+Duplicate order: 107412
+Duplicate order: 107503
+Duplicate order: 107630
+Duplicate order: 108190
+Duplicate order: 108489
+Duplicate order: 108726
+Duplicate order: 108854
+Duplicate order: 109066
+Duplicate order: 109408
+Duplicate order: 109425
+Duplicate order: 109641
+Duplicate order: 109668
+Duplicate order: 109796
+Duplicate order: 109932
+Duplicate order: 110041
+Duplicate order: 110997
+Duplicate order: 111830
+Duplicate order: 112006
+Duplicate order: 113714
+Duplicate order: 113921
+Duplicate order: 114405
+Duplicate order: 114597
+Duplicate order: 114770
+Duplicate order: 114802
+Duplicate order: 114822
+Duplicate order: 114942
+Duplicate order: 115262
+Duplicate order: 115415
+Duplicate order: 115444
+Duplicate order: 115517
+Duplicate order: 115772
+Duplicate order: 116054
+Duplicate order: 116509
+Duplicate order: 116513
+Duplicate order: 116541
+Duplicate order: 117019
+Duplicate order: 117239
+Duplicate order: 117454
+Duplicate order: 118509
+Duplicate order: 118533
+Duplicate order: 118655
+Duplicate order: 119129
+Duplicate order: 119384
+Duplicate order: 119621
+Duplicate order: 119659
+Duplicate order: 119939
+Duplicate order: 120419
+Duplicate order: 120539
+Duplicate order: 120894
+Duplicate order: 120895
+Duplicate order: 121126
+Duplicate order: 121238
+Duplicate order: 121919
+Duplicate order: 122079
+Duplicate order: 122394
+Duplicate order: 122754
+Duplicate order: 122871
+Duplicate order: 123177
+Duplicate order: 123299
+Duplicate order: 123709
+Duplicate order: 123776
+Duplicate order: 124386
+Duplicate order: 124837
+Duplicate order: 124996
+Duplicate order: 125888
+Duplicate order: 126317
+Duplicate order: 126477
+Duplicate order: 126896
+Duplicate order: 127002
+Duplicate order: 127141
+Duplicate order: 127259
+Duplicate order: 128228
+Duplicate order: 128456
+Duplicate order: 128471
+Duplicate order: 129035
+Duplicate order: 129322
+Duplicate order: 129384
+Duplicate order: 130641
+Duplicate order: 130693
+Duplicate order: 130729
+Duplicate order: 131383
+Duplicate order: 131973
+Duplicate order: 132736
+Duplicate order: 132807
+Duplicate order: 132855
+Duplicate order: 133319
+Duplicate order: 133426
+Duplicate order: 133479
+Duplicate order: 133590
+Duplicate order: 133611
+Duplicate order: 133636
+Duplicate order: 133871
+Duplicate order: 134162
+Duplicate order: 134206
+Duplicate order: 134529
+Duplicate order: 135503
+Duplicate order: 135527
+Duplicate order: 135798
+Duplicate order: 136276
+Duplicate order: 136765
+Duplicate order: 136941
+Duplicate order: 137083
+Duplicate order: 137188
+Duplicate order: 137490
+Duplicate order: 137515
+Duplicate order: 137541
+Duplicate order: 137975
+Duplicate order: 138267
+Duplicate order: 138551
+Duplicate order: 139103
+Duplicate order: 139482
+Duplicate order: 139652
+Duplicate order: 140019
+Duplicate order: 140251
+Duplicate order: 140512
+Duplicate order: 140892
+Duplicate order: 141151
+Duplicate order: 141440
+Duplicate order: 141746
+Duplicate order: 142152
+Duplicate order: 142161
+Duplicate order: 143127
+Duplicate order: 143382
+Duplicate order: 143402
+Duplicate order: 143539
+Duplicate order: 143640
+Duplicate order: 143752
+Duplicate order: 143781
+Duplicate order: 144068
+Duplicate order: 144165
+Duplicate order: 144356
+Duplicate order: 144935
+Duplicate order: 144991
+Duplicate order: 145036
+Duplicate order: 145083
+Duplicate order: 145502
+Duplicate order: 145517
+Duplicate order: 145675
+Duplicate order: 146237
+Duplicate order: 146271
+Duplicate order: 147232
+Duplicate order: 147574
+Duplicate order: 148973
+Duplicate order: 149131
+Duplicate order: 149393
+Duplicate order: 149703
+Duplicate order: 149725
+Duplicate order: 149849
+Total duplicates: 172
+
+===== TASK 4: STACK AND QUEUE =====
+-- Custom Stack --
+Undo: Order 1002 edited
+-- Built-in Stack --
+Undo: Order 1002 edited
+-- Custom Queue --
+Dispatch: Order 1001
+-- Built-in Queue --
+Dispatch: Order 1001
+
+===== TASK 5: REFUND =====
+Refund amount: 6
+Greedy coins: 3
+DP coins: 2
+PS C:\Users\Hp\OneDrive\Desktop\orderprocessingproject> 
