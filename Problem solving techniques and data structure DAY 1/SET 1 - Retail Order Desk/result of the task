@@ -1,0 +1,17 @@
+Task	Result	Time Complexity
+Linear Search	Found order 150000 in 5,773,300 ns	\(O(n)\)
+Binary Search	Found the same order in 15,200 ns	\(O(\log n)\)
+Bubble Sort	Sorted 10,000 records in 284,778,900 ns	\(O(n^2)\)
+Merge Sort	Sorted 10,000 records in 7,395,600 ns	\(O(n\log n)\)
+Built-in Sort	Sorted 10,000 records in 7,192,400 ns	Typically \(O(n\log n)\)
+Duplicate Detection	Detected 172 duplicate orders	Expected \(O(n)\)
+Stack and Queue	Custom and built-in implementations worked correctly	\(O(1)\) per operation
+Refund Calculation	Greedy: 3 coins; DP: 2 coins	DP: \(O(A \times d)\)
+
+Here, n is the number of records, A is the refund amount, and d is the number of coin denominations.
+Key observations
+1. Searching: Binary search was much faster than linear search in this run. Its sorting time was excluded from the benchmark.
+2. Sorting: Built-in sort was the fastest, followed closely by merge sort. Bubble sort was significantly slower.
+3. Duplicate detection: The program identified 172 duplicate orders using a hash-based approach.
+4. Stack and Queue: Both custom and built-in implementations produced the expected undo and dispatch results.
+5. Greedy vs DP: For amount 6 with denominations {1, 3, 4}, greedy used 3 coins (4 + 1 + 1), while dynamic programming used only 2 (3 + 3).
