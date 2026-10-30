@@ -1,0 +1,47 @@
+===== TASK 1: CLAIM ID BST =====
+
+Inorder: 20 30 40 50 60 70 80
+Preorder: 50 30 20 40 70 60 80
+Postorder: 20 40 30 60 80 70 50
+
+Search claim 60: true
+Search claim 90: false
+Search in empty tree: false
+
+
+===== TASK 2: DUPLICATE CLAIMS =====
+
+Duplicate claim: pol1001 | 2026-10-20
+Duplicate claim: POL 1002 | 2026-10-21
+Total duplicate claims: 2
+
+Empty input test:
+No claims available.
+
+
+===== TASK 3: CLAIM APPROVAL GRAPH =====
+
+Shortest path:
+[Registration, Assessment, Settlement]
+
+Circular dependency: false
+
+After adding a loop: true
+
+
+===== TASK 4: CLAIM SPIKE ANALYSIS =====
+
+Longest run: 3 days
+From day 6 to day 8
+
+Empty input test:
+No daily claim data available.
+
+
+===== TASK 5: MERGE REGIONAL CLAIMS =====
+
+Merged claim IDs:
+101 102 105 105 110 115 120 125
+
+Empty list test:
+Merged claim IDs:
