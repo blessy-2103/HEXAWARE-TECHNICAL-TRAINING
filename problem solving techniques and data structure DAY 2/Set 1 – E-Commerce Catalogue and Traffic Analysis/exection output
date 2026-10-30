@@ -1,0 +1,57 @@
+C:\Users\Hp\OneDrive\Desktop\ECommerceAnalysis> javac Main.java
+C:\Users\Hp\OneDrive\Desktop\ECommerceAnalysis> java Main
+
+===== TASK 1: PRODUCT CATEGORIES =====
+
+Inorder:
+Beauty Books Clothing Electronics Footwear Furniture
+Gaming Groceries Jewellery Kitchen Laptops Mobile
+Sports Toys Watches
+
+Preorder:
+Electronics Clothing Books Beauty Furniture Footwear
+Sports Groceries Gaming Jewellery Mobile Laptops Kitchen
+Toys Watches
+
+Postorder:
+Beauty Books Clothing Footwear Gaming Kitchen Laptops
+Mobile Jewellery Groceries Watches Toys Sports Furniture
+Electronics
+
+Search Electronics: true
+
+
+===== TASK 2: SKU LOOK-UP =====
+
+Collision index: 9
+First SKU found: true
+Second SKU found: true
+
+Custom hash table lookup time: [your measured time] ns
+Built-in HashMap lookup time: [your measured time] ns
+
+
+===== TASK 3: MICROSERVICE DEPENDENCIES =====
+
+BFS deployment order:
+[inventory, payment, pricing, cart, notification]
+
+DFS deployment order:
+[payment, inventory, pricing, cart, notification]
+
+Circular dependency: false
+
+After adding circular dependency: true
+
+
+===== TASK 4: PEAK TRAFFIC =====
+
+Busiest 3-hour window: 6:00 to 9:00
+Total requests: 1550
+
+
+===== TASK 5: GIFT CARD PAIRS =====
+
+100 + 400 = 500
+150 + 350 = 500
+200 + 300 = 500
