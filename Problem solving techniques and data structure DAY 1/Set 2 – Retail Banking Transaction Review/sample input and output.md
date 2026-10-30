@@ -1,8 +1,12 @@
+## Sample Console Output
+
+```text
 TASK 1: SEARCH
 Linear comparisons: 50000
 Binary comparisons: 1
 
 TASK 2: SORTING
+
 Insertion Sort:
 2 | A102 | 300.0 | Flipkart | 2026-10-29T09:00:00
 1 | A101 | 500.0 | Amazon | 2026-10-29T10:00:00
@@ -28,3 +32,4 @@ Brute Min: 100
 Brute Max: 900
 Divide Min: 100
 Divide Max: 900
+```
