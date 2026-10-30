@@ -1,17 +1,17 @@
 # E-Commerce Catalogue and Traffic Analysis – Decision Table
 
-| Problem | Data Structure / Algorithm Used | Reason for Choosing It |
+| Problem | Data Structure / Pattern Used | Reason for Choosing It |
 |---|---|---|
-| Product category insertion and search | Binary Search Tree (BST) | It stores categories in an ordered way and makes searching easier. |
-| Displaying product categories | Inorder, Preorder and Postorder Traversal | These traversals help display the categories in different orders. |
-| SKU lookup | Hash Table with Chaining | It helps find SKUs quickly. Chaining also handles collisions when multiple SKUs get the same index. |
-| Comparing SKU lookup performance | Java HashMap | I used the built-in HashMap to compare its lookup performance with my custom hash table. |
-| Microservice deployment dependencies | Graph | A graph represents the relationship between services and their dependencies. |
-| Finding deployment order | BFS and DFS | Both methods help find a valid order for deploying services. |
-| Detecting circular dependencies | Cycle Detection | It identifies whether services depend on each other in a loop. |
-| Finding peak traffic | Sliding Window Technique | It finds the busiest continuous 3-hour period without calculating every window from the beginning. |
-| Finding gift-card pairs | Two Pointers Technique | Since the order values are sorted, two pointers help find matching pairs with fewer comparisons. |
+| Inserting and searching product categories | Binary Search Tree (BST) | I used a BST to store categories in an ordered way. It makes it easier to search for a particular category. |
+| Displaying product categories | Tree Traversals | I used inorder, preorder and postorder to see how the categories are arranged in different ways. |
+| Finding a product using its SKU | Hash Table with Chaining | I used chaining to handle collisions when two SKUs get the same index. It also helps in finding products quickly. |
+| Comparing SKU search performance | Java HashMap | I used the built-in HashMap to compare its lookup time with my own hash table implementation. |
+| Representing microservice dependencies | Graph | I used a graph because each service may depend on another service before it can be deployed. |
+| Finding the deployment order | BFS and DFS | I used BFS and DFS to explore the service dependencies and find a valid deployment order. |
+| Checking circular dependencies | Cycle Detection | This helps me find whether the services depend on each other in a loop, which can prevent proper deployment. |
+| Finding the busiest 3-hour period | Sliding Window Technique | Instead of adding the requests again for every three-hour period, I update the total by removing the previous hour and adding the next one. |
+| Finding gift-card value pairs | Two Pointers Technique | Since the order values are already sorted, I used two pointers to find matching pairs without checking every possible combination. |
 
 ## Conclusion
 
-I selected each data structure and algorithm based on the problem it needed to solve. This helped me understand how BST, hashing, graphs, sliding windows and two pointers can be used in real-world e-commerce applications.
+While working on this task, I understood that choosing the right data structure can make a program easier and faster. Each technique was selected based on the problem, whether it was searching for products, handling service dependencies or analysing customer traffic.
