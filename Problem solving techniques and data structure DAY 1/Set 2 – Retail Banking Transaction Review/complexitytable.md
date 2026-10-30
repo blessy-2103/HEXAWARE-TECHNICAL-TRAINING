@@ -12,4 +12,4 @@
 | Min-Max Divide and Conquer | O(n) | O(n) | O(n) | O(log n) |
 | Brute Force Min-Max | O(n) | O(n) | O(n) | O(1) |
 
-**Note:** Duplicate detection has O(n) expected time with hashing, but can take O(n²) in the worst case due to collisions or repeated-key timestamp comparisons.
+
