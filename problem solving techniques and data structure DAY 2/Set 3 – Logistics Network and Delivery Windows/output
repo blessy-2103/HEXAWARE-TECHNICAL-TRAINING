@@ -1,0 +1,47 @@
+
+C:\Users\Hp\OneDrive\Desktop\CourierProject> javac Main.java
+
+C:\Users\Hp\OneDrive\Desktop\CourierProject> java Main
+
+===== TASK 1: HUB BST =====
+Inorder: HUB20 HUB30 HUB40 HUB50 HUB60 HUB70 HUB80
+Preorder: HUB50 HUB30 HUB20 HUB40 HUB70 HUB60 HUB80
+Postorder: HUB20 HUB40 HUB30 HUB60 HUB80 HUB70 HUB50
+Tree height: 2
+Search HUB60: true
+Search HUB90: false
+Height with sorted input: 6
+
+===== TASK 2: PARCEL TRACKING =====
+TRK1001 at DEPOT: false
+TRK1001 at HUB1: false
+TRK1001 at DEPOT again: true
+TRK1002 at HUB2: false
+
+===== TASK 3: HUB ROUTING GRAPH =====
+Adjacency List:
+DEPOT -> [H1, H2]
+H1 -> [DEPOT, H3, H4]
+H2 -> [DEPOT, H4, H5]
+H3 -> [H1, H6]
+H4 -> [H1, H2, H6, H7]
+H5 -> [H2, H7]
+H6 -> [H3, H4, H8]
+H7 -> [H4, H5, H8, H9]
+H8 -> [H6, H7, H9]
+H9 -> [H7, H8]
+
+Shortest route from DEPOT to H9:
+[DEPOT, H1, H4, H7, H9]
+
+Hubs reachable from DEPOT using DFS:
+DEPOT H1 H3 H6 H4 H2 H5 H7 H8 H9
+
+===== TASK 4: SLIDING WINDOW =====
+Highest 4-hour window: 7:00 to 11:00
+Total parcels: 2230
+Average parcels per hour: 557.5
+
+===== TASK 5: PALINDROME ROUTE =====
+A-B-C-B-A: true
+A-B-C-A: false
