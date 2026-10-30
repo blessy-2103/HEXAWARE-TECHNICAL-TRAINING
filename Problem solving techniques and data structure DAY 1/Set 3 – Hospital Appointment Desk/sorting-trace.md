@@ -1,11 +1,13 @@
 # Hospital Appointment System – Sorting Trace
 
-## Selection Sort – Step-by-Step Trace
+## Selection Sort – Step-by-Step Explanation
 
 ### Objective
-Sort appointments based on:
-1. Urgency level (1 = highest priority).
-2. Arrival time (earliest first) when urgency levels are equal.
+
+The aim is to arrange the appointments based on their priority.
+
+- First, appointments with higher urgency should come first (Urgency 1 has the highest priority).
+- If two appointments have the same urgency, the one with the earlier arrival time should come first.
 
 ### Initial Test Data
 
@@ -16,7 +18,7 @@ Sort appointments based on:
 | C | 103 | 2 | 08:00 AM |
 | D | 104 | 1 | 08:30 AM |
 
-**Initial order:**
+**Initially, the appointments are in this order:**
 
 ```text
 A → B → C → D
@@ -24,12 +26,14 @@ A → B → C → D
 
 ### Pass 1
 
-- Start with A.
-- Compare A with B: B has higher priority.
-- Compare B with C: B has higher priority.
-- Compare B with D: D has higher priority because both have urgency 1, but D arrived earlier.
-- Minimum element: D.
-- Swap A and D.
+I start by taking appointment A and comparing it with the remaining appointments.
+
+- B has higher priority than A because its urgency is 1.
+- C has lower priority than B.
+- D also has urgency 1, but it arrived earlier than B.
+- So, D should be placed first.
+
+I swap A and D.
 
 ```text
 Before: A → B → C → D
@@ -38,11 +42,13 @@ After:  D → B → C → A
 
 ### Pass 2
 
-- Consider the remaining elements: B, C, A.
-- Compare B with C: B has higher priority.
-- Compare B with A: B has higher priority.
-- Minimum element: B.
-- No swap required.
+Now I check the remaining appointments B, C and A.
+
+- B has higher priority than C.
+- B also has higher priority than A.
+- So, B is already in the correct position.
+
+No swap is needed.
 
 ```text
 D → B → C → A
@@ -50,10 +56,12 @@ D → B → C → A
 
 ### Pass 3
 
-- Consider the remaining elements: C, A.
-- Compare C with A: C has higher priority.
-- Minimum element: C.
-- No swap required.
+Only C and A are left to compare.
+
+- C has higher priority than A.
+- So, C stays before A.
+
+No swap is needed.
 
 ```text
 D → B → C → A
@@ -68,15 +76,17 @@ D → B → C → A
 | 3 | C | 103 | 2 | 08:00 AM |
 | 4 | A | 101 | 3 | 10:00 AM |
 
+**Final order:**
+
 ```text
 D → B → C → A
 ```
 
-### Swap Count
+### Number of Swaps
 
-| Pass | Swap |
+| Pass | Result |
 |---|---|
-| Pass 1 | A ↔ D |
+| Pass 1 | A and D swapped |
 | Pass 2 | No swap |
 | Pass 3 | No swap |
 | **Total** | **1 swap** |
@@ -89,10 +99,10 @@ D → B → C → A
 | Average Case | O(n²) |
 | Worst Case | O(n²) |
 
-**Space Complexity:** O(1), because Selection Sort sorts the array in place.
+**Space Complexity:** O(1), because Selection Sort uses the same array and does not need another array for sorting.
 
 ### Conclusion
 
-Selection Sort repeatedly finds the highest-priority appointment from the unsorted portion and places it in the correct position. In this example, it sorts four appointments using one swap.
+Through this example, I understood how Selection Sort arranges appointments by checking their priority one by one. It finds the correct appointment and places it in its position.
 
-It is simple to implement but not suitable for very large appointment datasets because its time complexity is O(n²).
+For this small set of four appointments, only one swap was needed. However, Selection Sort performs many comparisons when the number of appointments increases, so it may not be the best choice for a large hospital system.
