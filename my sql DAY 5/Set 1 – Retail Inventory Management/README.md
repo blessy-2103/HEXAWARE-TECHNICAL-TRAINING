@@ -1,3 +1,4 @@
+```mermaid
 erDiagram
     SUPPLIERS {
         int supplier_id PK
