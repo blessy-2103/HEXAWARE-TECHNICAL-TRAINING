@@ -1,7 +1,7 @@
 ---
 
-### 4. Data Types Justification & Operational Commands Notes
-You can add this brief note to your documentation:
+###  Data Types Justification & Operational Commands Notes
+
 
 * **Why `DECIMAL(15, 2)` for money?** Floating-point data types (`FLOAT`, `DOUBLE`) can introduce rounding errors due to binary representation, which is critical and unacceptable in financial calculations. `DECIMAL` stores exact numeric values with fixed precision and scale.
 * **Candidate & Composite Keys:** 
