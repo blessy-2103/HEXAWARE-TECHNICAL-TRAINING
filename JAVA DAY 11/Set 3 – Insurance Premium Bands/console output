@@ -1,0 +1,12 @@
+=====================================================================================================
+ID       | NAME            | BMI    | CATEGORY     | LOAD %   | BASE (INR)   | FINAL (INR)   | STATUS    
+=====================================================================================================
+INS-01   | Aarav Mehta     |  22.20 | Normal       |     0.0% |      4500.00 |       4500.00 | ELIGIBLE  
+INS-02   | Sneha Pillai    |  22.77 | Normal       |    20.0% |      6200.00 |       7440.00 | ELIGIBLE  
+INS-03   | Rohan Kulkarni  |  29.75 | Overweight   |    15.0% |      7800.00 |       8970.00 | ELIGIBLE  
+INS-04   | Divya Menon     |  17.01 | Underweight  |     5.0% |      6200.00 |       6510.00 | ELIGIBLE  
+INS-05   | Vikram Joshi    |  33.22 | Obese        |    55.0% |     12500.00 |      19375.00 | ELIGIBLE  
+INS-06   | Karan Verma     |  24.77 | Ineligible   |     0.0% |         0.00 |          0.00 | INELIGIBLE
+-----------------------------------------------------------------------------------------------------
+[BATCH HALTED] Ineligible applicant detected (INS-06 - Karan Verma). Labelled break triggered.
+=====================================================================================================
