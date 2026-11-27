@@ -1,0 +1,17 @@
+=== Hospital Visit Billing Summary (Polymorphic Loop) ===
+VST-1001  | OUTPATIENT | Raghavendra Rao    | Dr. S. Venkatesh   (Cardiology ) | Bill: ₹2,250.00
+VST-1002  | INPATIENT  | Meenakshi Sundaram | Dr. Priya Natarajan (Orthopedics) | Bill: ₹33,500.00
+VST-1003  | EMERGENCY  | Aarav Krishnan     | Dr. Arvind Menon   (Emergency  ) | Bill: ₹10,700.00
+VST-1004  | OUTPATIENT | Kavitha Nair       | Dr. Priya Natarajan (Orthopedics) | Bill: ₹1,650.00
+Total Gross Billing: ₹48,100.00
+
+=== Overloaded Billing Variants (VST-1002) ===
+Standard Bill                        : ₹33,500.00
+With 10% Senior/Corporate Discount   : ₹30,150.00
+With 10% Discount + ₹15,000 Insurance: ₹15,150.00
+
+=== Department-Wise Monthly Billing Totals (2D Array) ===
+Cardiology   -> Jan: ₹6,40,000.00 | Feb: ₹6,85,000.00 | Mar: ₹7,10,000.00 | Quarter Total: ₹20,35,000.00
+Orthopedics  -> Jan: ₹5,20,000.00 | Feb: ₹5,45,000.00 | Mar: ₹5,90,000.00 | Quarter Total: ₹16,55,000.00
+Emergency    -> Jan: ₹4,80,000.00 | Feb: ₹5,15,000.00 | Mar: ₹5,60,000.00 | Quarter Total: ₹15,55,000.00
+All-Departments Quarter Total: ₹52,45,000.00
