@@ -1,0 +1,27 @@
+=== 1. HashMap Lookup Using Equal Keys ===
+Lookup l1DuplicateKey in c1: 92.5%
+
+=== 2. Malformed Line Report ===
+Line 5 [INVALID FIELD COUNT]: 'BADLINE_NO_PIPES'
+Line 6 [INVALID LEARNER ID]: 'L99|TooShortId|2024-03-01|P'
+Line 7 [INVALID DATE]: 'L103|Neha|not-a-date|P'
+Line 8 [INVALID STATUS]: 'L104|Kiran|2024-03-01|X'
+
+=== 3. Formatted Attendance Report ===
+====================================================================
+ATTENDANCE REPORT — JAVA101 — Core Java & OOP
+====================================================================
+ID       | LEARNER            | SESSIONS     |    PRESENT |     ATT %
+--------------------------------------------------------------------
+L101     | Asha               | 2/2          |          2 |    100.0%
+L102     | Vikram             | 1/2          |          1 |     50.0%
+--------------------------------------------------------------------
+
+=== 4. Immutable AttendanceRecord ===
+Record: AttendanceRecord[learnerId=L101, learnerName=Asha, sessionDate=2024-03-01, status=P]
+Accessor values -> id=L101, date=2024-03-01, status=P
+
+=== 5. Thread-Safety Comparison ===
+Expected length : 2000
+StringBuilder   : 2000 (unsynchronised; race conditions possible)
+StringBuffer    : 2000 (synchronised methods; thread-safe)
