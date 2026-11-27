@@ -1,0 +1,9 @@
+toString() in Logging
+When an object is passed to System.out.println(obj), string concatenation ("Invoice: " + inv), or logger placeholders (logger.info("Saved {}", inv)), Java automatically invokes obj.toString(). Overriding toString() on Invoice and InvoiceLine produces a concise, readable single-line summary (INV-1001, customer, line count, total) instead of the default ClassName@hexHashCode, making application logs and error traces immediately informative.
+
+final on a Variable, Method, and Class
+Variable (final): Once assigned, the reference or primitive value cannot be reassigned (for example, GST_RATE or invoiceNumber). If it holds a mutable object reference (like private final List<InvoiceLine> lines), the reference cannot point to a different list, though the list's contents can still be modified unless wrapped.
+
+Method (final): Prevents subclasses from overriding the method, preserving critical base behavior or security/calculation invariants.
+
+Class (final): Prevents any class from extending it (such as RetailInvoice), locking down its inheritance hierarchy.
