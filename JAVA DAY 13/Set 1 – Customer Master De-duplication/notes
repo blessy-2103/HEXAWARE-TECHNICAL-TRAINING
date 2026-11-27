@@ -1,0 +1,15 @@
+Design & Contract Notes
+equals and hashCode Contract Note
+Reflexive, Symmetric, Transitive, and Consistent: x.equals(x) is always true; x.equals(y) matches y.equals(x); if x.equals(y) and y.equals(z), then x.equals(z); repeated calls return the same result as long as compared fields (email) do not change; and x.equals(null) always returns false.
+
+Hash-Equality Consistency: If a.equals(b) is true, then a.hashCode() == b.hashCode() must hold. In Customer, both methods use only the normalised email field (Objects.equals(this.email, other.email) and Objects.hash(this.email)), ensuring HashSet and HashMap place duplicate email records into the exact same hash bucket and reject duplicates accurately. (Unequal objects are permitted to share a hash code, though distinct hashes improve lookup speed.)
+
+Handwritten Customer Class vs. Java record (CustomerRecord)
+Generated Methods in record: The compiler automatically generates private final fields, component accessors (email(), fullName()), a canonical constructor, toString(), and equals()/hashCode() across all record components.
+
+Key Difference for De-duplication: Because a record compares every component (customerId, fullName, email, phone, channel), two records with the same email from different channels (C-101 on Web vs. C-103 on MobileApp) are treated as not equal (r1.equals(r2) == false), whereas our handwritten Customer overrides equals/hashCode strictly on email to merge cross-channel duplicates.
+
+Marker Interface vs. Functional Interface
+Marker Interface (Auditable): Contains zero methods. It tags a class with metadata so frameworks or processors can inspect type membership via instanceof at runtime. Use case: Marking domain entities (Customer, CustomerRecord) eligible for compliance audit logging or serialization (java.io.Serializable).
+
+Functional Interface (CustomerFilter): Contains exactly one abstract method (boolean test(Customer customer)), annotated with @FunctionalInterface. It enables behavior parameterization via lambda expressions or method references. Use case: Passing inline filtering rules (c -> "Web".equalsIgnoreCase(c.getChannel())) into CRM batch processors without writing boilerplate anonymous classes.
