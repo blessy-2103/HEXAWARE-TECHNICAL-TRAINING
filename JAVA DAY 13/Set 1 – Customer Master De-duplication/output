@@ -1,0 +1,39 @@
+=== 1. Incoming CRM Records (6 total) ===
+Customer[id=C-101, name=Arjun Nair, email=arjun.nair@example.com, phone=********3456, channel=Web]
+Customer[id=C-102, name=Meera Krishnan, email=meera.k@example.com, phone=******7654, channel=MobileApp]
+Customer[id=C-103, name=Arjun Nair, email=arjun.nair@example.com, phone=******3456, channel=MobileApp]
+Customer[id=C-104, name=Karthik Sundaram, email=karthik.s@example.com, phone=********1223, channel=StorePOS]
+Customer[id=C-105, name=Meera K., email=meera.k@example.com, phone=******7654, channel=StorePOS]
+Customer[id=C-106, name=Divya Menon, email=divya.menon@example.com, phone=******6780, channel=Web]
+
+=== 2. Deduplicated Master Customers (4 unique) ===
+Customer[id=C-101, name=Arjun Nair, email=arjun.nair@example.com, phone=********3456, channel=Web]
+Customer[id=C-102, name=Meera Krishnan, email=meera.k@example.com, phone=******7654, channel=MobileApp]
+Customer[id=C-104, name=Karthik Sundaram, email=karthik.s@example.com, phone=********1223, channel=StorePOS]
+Customer[id=C-106, name=Divya Menon, email=divya.menon@example.com, phone=******6780, channel=Web]
+
+=== 3. Java Record Comparison ===
+r1.equals(r2) [different id/channel]: false
+r1.equals(r3) [same normalised components]: true
+
+=== 4. String Cleaning, Immutability & Constant Pool ===
+Original raw length : 26 | Trimmed length: 22
+poolLiteral1 == poolLiteral2      : true
+poolLiteral1 == heapString        : false
+poolLiteral1.equals(heapString)   : true
+poolLiteral1 == internedString    : true
+Split Name -> First: 'Ravi Shankar', Last: 'Menon'
+Masked Phone -> ********3456
+
+=== 5. Notifier Interface Demo ===
+[EMAIL -> arjun.nair@example.com] Welcome Arjun! Your CRM profile is verified.
+[SMS   -> ********3456] Hi Arjun, your CRM registration is active.
+[EMAIL -> meera.k@example.com] Welcome Meera! Your CRM profile is verified.
+[SMS   -> ******7654] Hi Meera, your CRM registration is active.
+[EMAIL -> karthik.s@example.com] Welcome Karthik! Your CRM profile is verified.
+[SMS   -> ********1223] Hi Karthik, your CRM registration is active.
+[EMAIL -> divya.menon@example.com] Welcome Divya! Your CRM profile is verified.
+[SMS   -> ******6780] Hi Divya, your CRM registration is active.
+
+=== 6. Marker & Functional Interface Demo ===
+Auditable Web-channel customers: [Customer[id=C-101, name=Arjun Nair, email=arjun.nair@example.com, phone=********3456, channel=Web], Customer[id=C-106, name=Divya Menon, email=divya.menon@example.com, phone=******6780, channel=Web]]
