@@ -1,0 +1,3 @@
+Comparable vs Comparator: Comparable (compareTo) defines a class's single default/natural order inside the entity itself (here courseCode, then score descending, then learnerName), whereas Comparator defines external or secondary sort rules (such as waitlist promotion or sorting by name) without changing Registration.
+
+Wildcard <? extends Course>: Because generics in Java are invariant (List<BootcampCourse> is not a subtype of List<Course>), ? extends Course lets totalCapacity accept lists of Course or any subclass safely for read/sum operations.
