@@ -1,0 +1,13 @@
+### Abstract Class vs. Interface (`Vehicle` vs. `Insurable`)
+
+* **`Vehicle` (Abstract Class):** Models core identity and shared state (`registrationNumber`, `model`, `type`) along with common behavior (`getDailyRate()`), while requiring every vehicle subtype to implement `lateFee(int lateDays)`. Every `Car`, `Bike`, and `Van` **is-a** `Vehicle`.
+* **`Insurable` (Interface):** Represents an optional capability ("can be insured") that applies only to `Car` and `Van`, keeping `Bike` free of unused insurance methods. Using an interface lets `Car` and `Van` adopt insurance behavior alongside inheriting from `Vehicle`.
+
+### Principle Applied in Refactoring the God Class
+
+* **Single Responsibility Principle (SRP):** Separating domain rental state (`Rental`), billing calculations (`BillingService`), and invoice printing (`ReceiptPrinter`) gives each class one clear responsibility and a single reason to change.
+
+### Composition vs. Inheritance
+
+* **Inheritance (`IS-A`):** Best when a subclass genuinely specializes a parent type (`Car`, `Bike`, and `Van` are types of `Vehicle`), sharing core state and polymorphic contracts. Overusing inheritance creates rigid, tightly coupled hierarchies.
+* **Composition (`HAS-A`):** Best when assembling objects from independent parts (`Rental` **has a** `Vehicle` and **has a** `Customer`). Composition keeps `Vehicle` and `Customer` reusable across other features, reduces coupling, and makes replacing or updating components straightforward.
