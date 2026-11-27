@@ -1,0 +1,43 @@
+[Invoice Static Initialiser] Sequence initialised to INV-1000
+=== 1,000-Line-Item String Build Benchmark ===
+String '+' Concat :  2,140,800 ns (2.141 ms)
+StringBuilder     :    185,400 ns (0.185 ms)
+StringBuffer      :    248,900 ns (0.249 ms)
+
+[LOG] Created line item : ITM-101    | Wireless Mechanical Keyboard |    1 | ₹  3,499.00 | ₹   3,499.00
+[LOG] Created invoice   : Invoice[number=INV-1001, customer=Ananya Krishnan, lineCount=3, grandTotal=₹9,289.11]
+[LOG] Created invoice   : Invoice[number=INV-1002, customer=Cauvery Logistics Pvt Ltd, lineCount=2, grandTotal=₹79,650.00]
+
+=== Polymorphic Invoice Output (instanceof Pattern Matching) ===
+[RETAIL RECEIPT] INV-1001 | Store: CHN-04 | Paid via: UPI | Total: ₹9,289.11
+==================================================================================
+                            TAX INVOICE (GST @ 18%)
+==================================================================================
+Invoice No : INV-1001             Customer : Ananya Krishnan
+----------------------------------------------------------------------------------
+SKU        | ITEM DESCRIPTION             |  QTY |  UNIT PRICE |   LINE TOTAL
+----------------------------------------------------------------------------------
+ITM-101    | Wireless Mechanical Keyboard |    1 | ₹  3,499.00 | ₹   3,499.00
+ITM-102    | USB-C Multiport Hub          |    2 | ₹  1,299.50 | ₹   2,599.00
+ITM-103    | Laptop Stand Aluminium       |    1 | ₹  1,850.00 | ₹   1,850.00
+----------------------------------------------------------------------------------
+Subtotal   : ₹    7,948.00
+GST (18%)  : ₹    1,430.64
+Grand Total: ₹    9,378.64
+==================================================================================
+
+[CORPORATE TAX INVOICE] INV-1002 | GSTIN: 33AABCC1234D1Z5 | PO: PO-2026-889 | Net 30 Days | Subtotal: ₹67,500.00 | GST: ₹12,150.00 | Grand Total: ₹79,650.00
+==================================================================================
+                            TAX INVOICE (GST @ 18%)
+==================================================================================
+Invoice No : INV-1002             Customer : Cauvery Logistics Pvt Ltd
+----------------------------------------------------------------------------------
+SKU        | ITEM DESCRIPTION             |  QTY |  UNIT PRICE |   LINE TOTAL
+----------------------------------------------------------------------------------
+SRV-201    | Enterprise Cloud Node (Month |    4 | ₹ 14,500.00 | ₹  58,000.00
+SRV-202    | Dedicated Support SLA        |    1 | ₹  9,500.00 | ₹   9,500.00
+----------------------------------------------------------------------------------
+Subtotal   : ₹   67,500.00
+GST (18%)  : ₹   12,150.00
+Grand Total: ₹   79,650.00
+==================================================================================
