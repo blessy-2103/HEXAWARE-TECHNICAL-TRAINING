@@ -1,0 +1,59 @@
+classDiagram
+    class PolicyStatus {
+        <<enumeration>>
+        DRAFT
+        ACTIVE
+        LAPSED
+        CANCELLED
+    }
+
+    class Policy {
+        <<abstract>>
+        -final String policyNumber
+        -final String holderName
+        -final double baseAmount
+        -PolicyStatus status
+        +getPolicyNumber() String
+        +getHolderName() String
+        +getBaseAmount() double
+        +getStatus() PolicyStatus
+        +setStatus(PolicyStatus) void
+        +calculatePremium()* double
+        +getPolicyType() String
+        +summaryLine() String
+    }
+
+    class MotorPolicy {
+        -final int vehicleAgeYears
+        -final boolean zeroDepreciation
+        +calculatePremium() double
+    }
+
+    class HealthPolicy {
+        -final int insuredMembers
+        -final int eldestMemberAge
+        +calculatePremium() double
+    }
+
+    class TravelPolicy {
+        -final int tripDays
+        -final boolean international
+        +calculatePremium() double
+    }
+
+    class HomePolicy {
+        -final double propertyValue
+        -final boolean floodCover
+        +calculatePremium() double
+    }
+
+    class InsuranceApp {
+        +main(String[] args) void
+    }
+
+    Policy --> PolicyStatus : uses
+    MotorPolicy --|> Policy
+    HealthPolicy --|> Policy
+    TravelPolicy --|> Policy
+    HomePolicy --|> Policy
+    InsuranceApp --> Policy : manages array of
