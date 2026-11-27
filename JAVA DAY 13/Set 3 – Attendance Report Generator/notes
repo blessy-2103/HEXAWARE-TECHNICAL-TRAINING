@@ -1,0 +1,11 @@
+String Immutability: In Java, a String object's internal character/byte sequence cannot be changed after creation. Operations like trim(), strip(), substring(), toUpperCase(), or + concatenation never mutate the original String instance; instead, they return a new String object. This makes strings inherently thread-safe, shareable in the String Constant Pool, and reliable as HashMap / HashSet keys because their hashCode() cannot silently change after insertion.
+
+Record Immutability (AttendanceRecord): Record components are implicitly private final, and the compiler generates no setter methods. Once constructed, fields on an AttendanceRecord instance cannot be reassigned (record.status = "A" or record.setStatus("A") will not compile).
+
+String vs. StringBuilder vs. StringBuffer:
+
+String: Immutable; best for constants, keys, and short text where modifications are infrequent.
+
+StringBuilder: Mutable and not synchronised; fastest for single-threaded string construction such as building attendance or invoice reports in a loop.
+
+StringBuffer: Mutable and synchronised on its methods; safer when multiple threads append to the same buffer concurrently, though slower than StringBuilder due to locking overhead.
