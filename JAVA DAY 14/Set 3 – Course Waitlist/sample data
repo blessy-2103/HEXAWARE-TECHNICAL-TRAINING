@@ -1,0 +1,54 @@
+=== SAMPLE DATA (10 registrations) ===
+  [L-101 | Ananya     | JAVA-101 | 2026-11-10T10:05 | senior=false | score=88]
+  [L-102 | Rohan      | JAVA-101 | 2026-11-10T10:05 | senior=true  | score=82]
+  [L-103 | Priya      | SQL-201  | 2026-11-10T10:12 | senior=false | score=95]
+  [L-104 | Karthik    | SQL-201  | 2026-11-10T10:18 | senior=true  | score=91]
+  [L-105 | Meera      | JAVA-101 | 2026-11-10T10:25 | senior=false | score=79]
+  [L-106 | Vikram     | SQL-201  | 2026-11-10T10:30 | senior=false | score=95]
+  [L-107 | Divya      | JAVA-101 | 2026-11-10T10:35 | senior=true  | score=88]
+  [L-108 | Arjun      | SQL-201  | 2026-11-10T10:40 | senior=false | score=74]
+  [L-101 | Ananya     | JAVA-101 | 2026-11-10T10:50 | senior=true  | score=90]
+  [L-103 | Priya      | SQL-201  | 2026-11-10T10:55 | senior=false | score=96]
+
+=== TASK 2: DEDUPLICATE WITH HashSet ===
+  Duplicate registrations removed: 2
+  Unique registrations remaining: 8
+
+=== TASK 1: WAITLIST PRIORITY QUEUE (Earlier registered, then Senior) ===
+   1. [L-102 | Rohan      | JAVA-101 | 2026-11-10T10:05 | senior=true  | score=82]
+   2. [L-101 | Ananya     | JAVA-101 | 2026-11-10T10:05 | senior=false | score=88]
+   3. [L-103 | Priya      | SQL-201  | 2026-11-10T10:12 | senior=false | score=95]
+   4. [L-104 | Karthik    | SQL-201  | 2026-11-10T10:18 | senior=true  | score=91]
+   5. [L-105 | Meera      | JAVA-101 | 2026-11-10T10:25 | senior=false | score=79]
+   6. [L-106 | Vikram     | SQL-201  | 2026-11-10T10:30 | senior=false | score=95]
+   7. [L-107 | Divya      | JAVA-101 | 2026-11-10T10:35 | senior=true  | score=88]
+   8. [L-108 | Arjun      | SQL-201  | 2026-11-10T10:40 | senior=false | score=74]
+
+=== TASK 3: FINAL ROSTER (Course ASC, Score DESC, Name ASC) ===
+  [L-101 | Ananya     | JAVA-101 | 2026-11-10T10:05 | senior=false | score=88]
+  [L-107 | Divya      | JAVA-101 | 2026-11-10T10:35 | senior=true  | score=88]
+  [L-102 | Rohan      | JAVA-101 | 2026-11-10T10:05 | senior=true  | score=82]
+  [L-105 | Meera      | JAVA-101 | 2026-11-10T10:25 | senior=false | score=79]
+  [L-103 | Priya      | SQL-201  | 2026-11-10T10:12 | senior=false | score=95]
+  [L-106 | Vikram     | SQL-201  | 2026-11-10T10:30 | senior=false | score=95]
+  [L-104 | Karthik    | SQL-201  | 2026-11-10T10:18 | senior=true  | score=91]
+  [L-108 | Arjun      | SQL-201  | 2026-11-10T10:40 | senior=false | score=74]
+  Alternative order via Comparator (Name ASC, Score DESC):
+    [L-101 | Ananya     | JAVA-101 | 2026-11-10T10:05 | senior=false | score=88]
+    [L-108 | Arjun      | SQL-201  | 2026-11-10T10:40 | senior=false | score=74]
+    [L-107 | Divya      | JAVA-101 | 2026-11-10T10:35 | senior=true  | score=88]
+    [L-104 | Karthik    | SQL-201  | 2026-11-10T10:18 | senior=true  | score=91]
+
+=== TASK 4: TreeSet BY SCORE & WILDCARD CAPACITY SUM ===
+  Top 4 learners by score (TreeSet):
+    [L-103 | Priya      | SQL-201  | 2026-11-10T10:12 | senior=false | score=95]
+    [L-106 | Vikram     | SQL-201  | 2026-11-10T10:30 | senior=false | score=95]
+    [L-104 | Karthik    | SQL-201  | 2026-11-10T10:18 | senior=true  | score=91]
+    [L-101 | Ananya     | JAVA-101 | 2026-11-10T10:05 | senior=false | score=88]
+  Total capacity of List<BootcampCourse> via <? extends Course>: 55
+
+=== TASK 5: ARRAYS & COLLECTIONS UTILITIES ===
+  1. Arrays.sort -> [A-JAVA, B-CLOUD, C-SQL, D-DEVOPS]
+  2. Arrays.binarySearch('C-SQL') -> index 2
+  3. Collections.reverse -> [D-DEVOPS, C-SQL, B-CLOUD, A-JAVA]
+  4. Collections.unmodifiableList -> [D-DEVOPS, C-SQL, B-CLOUD, A-JAVA]
