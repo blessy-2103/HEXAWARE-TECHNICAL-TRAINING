@@ -1,0 +1,24 @@
+=== Policy Portfolio (Polymorphic Premium Calculation) ===
+POL-MTR101 | Motor      | Arjun Nair         | ACTIVE    | Premium: ₹14,300.00
+POL-MTR102 | Motor      | Meera Krishnan     | LAPSED    | Premium: ₹24,000.00
+POL-HLT201 | Health     | Karthik Sundaram   | ACTIVE    | Premium: ₹26,600.00
+POL-HLT202 | Health     | Divya Menon        | DRAFT     | Premium: ₹7,500.00
+POL-TRV301 | Travel     | Rohan Deshmukh     | ACTIVE    | Premium: ₹4,100.00
+POL-TRV302 | Travel     | Ananya Iyer        | CANCELLED | Premium: ₹780.00
+POL-HOM401 | Home       | Vikramaditya Rao   | ACTIVE    | Premium: ₹18,300.00
+POL-HOM402 | Home       | Sneha Kulkarni     | ACTIVE    | Premium: ₹11,040.00
+Total Portfolio Premium: ₹1,06,620.00
+
+=== Regional Monthly Premium Collection (2D Array) ===
+North  -> Jan: ₹4,20,000.00 | Feb: ₹4,55,000.00 | Mar: ₹4,90,000.00 | Quarter Total: ₹13,65,000.00
+South  -> Jan: ₹5,10,000.00 | Feb: ₹5,30,000.00 | Mar: ₹5,65,000.00 | Quarter Total: ₹16,05,000.00
+East   -> Jan: ₹2,80,000.00 | Feb: ₹2,95,000.00 | Mar: ₹3,10,000.00 | Quarter Total: ₹8,85,000.00
+West   -> Jan: ₹3,90,000.00 | Feb: ₹4,15,000.00 | Mar: ₹4,40,000.00 | Quarter Total: ₹12,45,000.00
+All-Regions Quarter Total: ₹51,00,000.00
+
+=== Branch-Level Collection by Region (Jagged Array) ===
+North  (3 branches) -> Total: ₹4,65,000.00
+South  (4 branches) -> Total: ₹8,10,000.00
+East   (2 branches) -> Total: ₹3,15,000.00
+West   (3 branches) -> Total: ₹5,45,000.00
+Total Across All Branches: ₹21,35,000.00
