@@ -1,0 +1,86 @@
+classDiagram
+    class VehicleType {
+        <<enumeration>>
+        CAR(2500.0)
+        BIKE(800.0)
+        VAN(4200.0)
+        -final double dailyRate
+        +getDailyRate() double
+    }
+
+    class Insurable {
+        <<interface>>
+        +calculateInsuranceFee(int days) double
+        +getCoverageDetails() String
+    }
+
+    class Vehicle {
+        <<abstract>>
+        -final String registrationNumber
+        -final String model
+        -final VehicleType type
+        +getRegistrationNumber() String
+        +getModel() String
+        +getType() VehicleType
+        +getDailyRate() double
+        +lateFee(int lateDays)* double
+    }
+
+    class Car {
+        -final boolean luxurySegment
+        +lateFee(int lateDays) double
+        +calculateInsuranceFee(int days) double
+        +getCoverageDetails() String
+    }
+
+    class Bike {
+        -final int engineCc
+        +lateFee(int lateDays) double
+    }
+
+    class Van {
+        -final int seatingCapacity
+        +lateFee(int lateDays) double
+        +calculateInsuranceFee(int days) double
+        +getCoverageDetails() String
+    }
+
+    class Customer {
+        -final String customerId
+        -final String name
+        -final String licenseNumber
+        +getCustomerId() String
+        +getName() String
+        +getLicenseNumber() String
+    }
+
+    class Rental {
+        -final String rentalId
+        -final Vehicle vehicle
+        -final Customer customer
+        -final int daysUsed
+        -final int lateDays
+        +calculateBaseRentalAmount() double
+    }
+
+    class BillingService {
+        +calculateInsuranceAmount(Rental) double
+        +calculateLateFeeAmount(Rental) double
+        +calculateTotalPayable(Rental) double
+    }
+
+    class ReceiptPrinter {
+        +printReceipt(Rental, BillingService) void
+    }
+
+    Vehicle --> VehicleType : has
+    Car --|> Vehicle
+    Bike --|> Vehicle
+    Van --|> Vehicle
+    Car ..|> Insurable
+    Van ..|> Insurable
+    Rental *-- Vehicle : HAS-A
+    Rental *-- Customer : HAS-A
+    BillingService ..> Rental : calculates for
+    ReceiptPrinter ..> Rental : prints
+    ReceiptPrinter ..> BillingService : uses
