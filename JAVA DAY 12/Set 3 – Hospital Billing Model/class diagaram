@@ -1,0 +1,73 @@
+classDiagram
+    class VisitType {
+        <<enumeration>>
+        OUTPATIENT
+        INPATIENT
+        EMERGENCY
+    }
+
+    class Patient {
+        -final String patientId
+        -final String name
+        -final int age
+        +getPatientId() String
+        +getName() String
+        +getAge() int
+    }
+
+    class Doctor {
+        -final String doctorId
+        -final String name
+        -final String department
+        +getDoctorId() String
+        +getName() String
+        +getDepartment() String
+    }
+
+    class Visit {
+        <<abstract>>
+        -final String visitId
+        -final VisitType visitType
+        -final Patient patient
+        -final Doctor doctor
+        -final double consultationFee
+        +getVisitId() String
+        +getVisitType() VisitType
+        +getPatient() Patient
+        +getDoctor() Doctor
+        +getConsultationFee() double
+        +calculateBill()* double
+        +calculateBill(double discountPercent) double
+        +calculateBill(double discountPercent, double insuranceCoverage) double
+        +formatInvoiceLine() String
+    }
+
+    class OutPatientVisit {
+        -final double diagnosticCharges
+        +calculateBill() double
+    }
+
+    class InPatientVisit {
+        -final int daysAdmitted
+        -final double perDayRoomCharge
+        -final double procedureCharges
+        +calculateBill() double
+    }
+
+    class EmergencyVisit {
+        -final double emergencySurcharge
+        -final double traumaCareCharges
+        +calculateBill() double
+    }
+
+    class HospitalBillingApp {
+        +main(String[] args) void
+    }
+
+    Visit --> VisitType : uses
+    Visit *-- Patient : HAS-A
+    Visit *-- Doctor : HAS-A
+    OutPatientVisit --|> Visit
+    InPatientVisit --|> Visit
+    EmergencyVisit --|> Visit
+    HospitalBillingApp --> Visit : processes array of
