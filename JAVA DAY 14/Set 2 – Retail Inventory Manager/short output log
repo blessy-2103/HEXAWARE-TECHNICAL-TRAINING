@@ -1,0 +1,47 @@
+=== TASK 1: INVENTORY OPERATIONS & LOW-STOCK ALERTS ===
+Low-stock products:
+  [SKU-101 | Electronics | Wireless Mouse         | stock=4  (min=5)  | ₹799.00]
+  [SKU-102 | Electronics | Mechanical Keyboard    | stock=4  (min=6)  | ₹2499.00]
+  [SKU-201 | Furniture  | Office Chair           | stock=3  (min=4)  | ₹8499.00]
+  [SKU-302 | Stationery | Gel Pen Pack           | stock=6  (min=8)  | ₹150.00]
+
+=== TASK 2: SORTING (Comparable vs Comparator) ===
+Natural order (Category ASC, Stock DESC, Name ASC):
+  [SKU-103 | Electronics | USB-C Hub              | stock=18 (min=8)  | ₹1499.00]
+  [SKU-101 | Electronics | Wireless Mouse         | stock=4  (min=5)  | ₹799.00]
+  [SKU-102 | Electronics | Mechanical Keyboard    | stock=4  (min=6)  | ₹2499.00]
+  [SKU-202 | Furniture  | Standing Desk          | stock=12 (min=3)  | ₹15999.00]
+  [SKU-201 | Furniture  | Office Chair           | stock=3  (min=4)  | ₹8499.00]
+  [SKU-301 | Stationery | A4 Copier Paper        | stock=25 (min=10) | ₹320.00]
+  [SKU-302 | Stationery | Gel Pen Pack           | stock=6  (min=8)  | ₹150.00]
+Alternative order (Price DESC, Name ASC):
+  [SKU-202 | Furniture  | Standing Desk          | stock=12 (min=3)  | ₹15999.00]
+  [SKU-201 | Furniture  | Office Chair           | stock=3  (min=4)  | ₹8499.00]
+  [SKU-102 | Electronics | Mechanical Keyboard    | stock=4  (min=6)  | ₹2499.00]
+  [SKU-103 | Electronics | USB-C Hub              | stock=18 (min=8)  | ₹1499.00]
+  [SKU-101 | Electronics | Wireless Mouse         | stock=4  (min=5)  | ₹799.00]
+  [SKU-301 | Stationery | A4 Copier Paper        | stock=25 (min=10) | ₹320.00]
+  [SKU-302 | Stationery | Gel Pen Pack           | stock=6  (min=8)  | ₹150.00]
+
+=== TASK 3: RECENT ACTIVITY LOG (Last 10 movements) ===
+  ADDED SKU-301 (stock=25)
+  ADDED SKU-302 (stock=6)
+  ADDED SKU-303 (stock=2)
+  UPDATED SKU-101 by -14 -> stock=4
+  UPDATED SKU-202 by +5 -> stock=12
+  REMOVED SKU-303
+  UPDATED SKU-102 by +10 -> stock=14
+  UPDATED SKU-201 by +4 -> stock=7
+  UPDATED SKU-301 by -18 -> stock=7
+  UPDATED SKU-103 by -2 -> stock=16
+
+=== TASK 4: GENERIC REPOSITORY<T> ===
+Fetched Product: [SKU-202 | Furniture  | Standing Desk          | stock=12 (min=3)  | ₹15999.00]
+Fetched Supplier: [SUP-01 | Apex Tech Distributors | orders@apextech.in]
+Repos sizes -> Products: 7, Suppliers: 2
+
+=== TASK 5: AUTOBOXING, INTEGER CACHE & == VS equals() ===
+unboxedStock = 100
+127 == 127 (cached): true
+128 == 128 (outside cache): false
+128.equals(128): true
